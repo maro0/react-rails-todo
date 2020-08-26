@@ -48,6 +48,7 @@ class MainContainer extends React.Component{
                             <TodoElem
                                 id={item.id}
                                 title={item.title}
+                                setTodos={this.setTodos}
                             />
                         ))}
                     </TableBody>

@@ -8,4 +8,9 @@ class TodosController < ApplicationController
         @todo = Todo.new(title: params[:title])
         @todo.save
     end
+
+    def destroy
+        @todo = Todo.find(params[:id])
+        @todo.destroy
+    end
 end
