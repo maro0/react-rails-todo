@@ -14,7 +14,7 @@ export default class TodoElem extends React.Component{
     render(){
         const todo = this.props;
         return (
-            <TableRow>
+            <TableRow >
                 <TableCell>{todo.id}</TableCell>
                 <TableCell>{todo.title}</TableCell>
                 <TableCell>

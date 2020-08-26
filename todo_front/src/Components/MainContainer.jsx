@@ -12,13 +12,21 @@ class MainContainer extends React.Component{
         this.state = {
             todos: []
         }
+
+        this.setTodos = this.setTodos.bind(this);
     }
 
     componentDidMount(){
+        this.setTodos();
+    }
+
+    setTodos(){
+        console.log("111")
         axios.get('http://localhost:3001/todos')
         .then((results) =>{
-            console.log(results.data)
-            this.setState({todos: results.data})
+            this.setState(() => {
+                return {todos: results.data};
+            })
         })
         .catch((data) => {
         })
@@ -37,14 +45,14 @@ class MainContainer extends React.Component{
                     </TableHead>
                     <TableBody>
                         { this.state.todos.map((item) =>(
-                            <TodoElem 
+                            <TodoElem
                                 id={item.id}
                                 title={item.title}
                             />
                         ))}
                     </TableBody>
                 </Table>
-                <TodoInput />
+                <TodoInput setTodos={this.setTodos}/>
             </div>
         );
     }

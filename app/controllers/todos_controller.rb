@@ -3,4 +3,9 @@ class TodosController < ApplicationController
         @todo = Todo.all
         render json: @todo
     end
+
+    def create
+        @todo = Todo.new(title: params[:title])
+        @todo.save
+    end
 end
