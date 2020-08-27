@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios';
 import TodoElem from './TodoElem'
 import TodoInput from './TodoInput'
-import Grid from '@material-ui/core/Grid';
 import {Table,TableHead,TableRow,TableCell,TableBody} from '@material-ui/core'
 import "./MainContainer.scss"
 
@@ -37,7 +36,7 @@ class MainContainer extends React.Component{
             <div className='app-main'>
                 <Table className="todo-table">
                     <TableHead>
-                        <TableRow>
+                        <TableRow key="todo-head">
                             <TableCell>id</TableCell>
                             <TableCell>title</TableCell>
                             <TableCell>button</TableCell>
@@ -45,11 +44,13 @@ class MainContainer extends React.Component{
                     </TableHead>
                     <TableBody>
                         { this.state.todos.map((item) =>(
-                            <TodoElem
-                                id={item.id}
-                                title={item.title}
-                                setTodos={this.setTodos}
-                            />
+                            <React.Fragment key={item.id}>
+                                <TodoElem
+                                    id={item.id}
+                                    title={item.title}
+                                    setTodos={this.setTodos}
+                                />
+                            </React.Fragment>
                         ))}
                     </TableBody>
                 </Table>
