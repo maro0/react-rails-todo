@@ -17,10 +17,25 @@ React.jsはUI、RailsはAPIサーバを担当しており、必要に応じてRe
 # 利用ツール
 * Rails
 * React.js
+    * node.js
+    * npm
 * material-ui 
 * sqqlite3
 
-# 利用法
+# インストール
+## Reactの初期設定
+
+* node.js
+* npm
+をそれぞれインストールする。
+その後以下のコマンドを実行し、パッケージをインストールする。
+
+```
+cd ./todo_front
+npm install
+```
+
+
 ## DBの設定をする
 
 ```
@@ -28,6 +43,7 @@ rake db:create
 rake db:migrate
 ```
 
+# 利用法
 ## Railsの起動
 
 ```
