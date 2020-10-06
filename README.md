@@ -11,7 +11,7 @@ RailsとReact.jsの組み合わせ方としては
 の三通りが考えられます。
 参考(https://qiita.com/k-penguin-sato/items/e3cc04f787cf3254cfae)
 
-問題発生時の対処のしやすさ等を考え、今回はRails,Reactを分離して実装しています。
+問題発生時の対処のしやすさ等を考え、今回はRails,Reactを分離して実装しています。  
 React.jsはUI、RailsはAPIサーバを担当しており、必要に応じてReact.js側からRailsへリクエストを送り、データのやり取りを行っています。
 
 # 利用ツール
