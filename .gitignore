@@ -36,6 +36,7 @@
 /public/packs
 /public/packs-test
 /node_modules
+/todo_front/node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
